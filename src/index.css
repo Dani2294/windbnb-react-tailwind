@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Mulish:wght@400;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base /* series of resets (ex: margin, padding, font-size, ectc...) */ {
+	/* Here you'll insert base styles (ex: :root, body, variables, h1 etc...) */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components /* styles for components class (ex: container ) */ {
+	/* Here you'll insert components styles (ex: buttons, cards, etc...) */
+	.clamp-1 {
+		font-size: clamp(1.125rem, 1vw, 1.5rem);
+	}
+	.clamp-2 {
+		font-size: clamp(0.875rem, 1vw, 1rem);
+	}
+	.clamp-3 {
+		font-size: clamp(0.75rem, 1vw, 0.875rem);
+	}
+	.clamp-4 {
+		font-size: clamp(0.625rem, 1vw, 0.75rem);
+	}
+}
+
+@layer utilities /* series of utilities class (ex: pt, mt, shadow, grid-cols-2, etc...) */ {
+	/* Here you'll insert custom utilities classes (ex: .filter-none { filter: none; ) */
 }
