@@ -14,6 +14,7 @@ function FilterDrawer({
 	data,
 	locationVal,
 	guests,
+	setLocationVal,
 	handleLocation,
 	handleGuests,
 	handleSubmit,
@@ -140,9 +141,14 @@ function FilterDrawer({
 								filterShow.location ? 'block' : 'hidden'
 							} px-6 space-y-6`}>
 							{cities.map((city, idx) => (
-								<li key={`${city}-${idx}`} className='flex items-center'>
-									<MdLocationOn className='text-grey-300 mr-3 text-lg' />
-									<span className='text-grey-300 text-sm'>{city}, Finland</span>
+								<li
+									onClick={() => setLocationVal(city)}
+									key={`${city}-${idx}`}
+									className='flex items-center cursor-pointer group'>
+									<MdLocationOn className='text-grey-300 mr-3 text-lg group-hover:text-brand' />
+									<span className='text-grey-300 text-sm group-hover:text-brand'>
+										{city}, Finland
+									</span>
 								</li>
 							))}
 						</ul>

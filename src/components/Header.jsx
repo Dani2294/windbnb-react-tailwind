@@ -16,7 +16,7 @@ function Header({ locationVal, guests, handleDrawer }) {
 						className='flex max-w-[19rem] mx-auto sm:max-w-none sm:mx-0 shadow-base rounded-2xl cursor-pointer'>
 						<div className='flex items-center justify-center py-5 px-4 text-grey-400 text-sm font-font2'>
 							{locationVal ? (
-								locationVal + ' ,Finland'
+								locationVal + ', Finland'
 							) : (
 								<span className='text-grey-100'>Add Location</span>
 							)}

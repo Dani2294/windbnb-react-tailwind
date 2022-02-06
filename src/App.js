@@ -78,6 +78,7 @@ function App() {
 						data={staysArr}
 						locationVal={locationVal}
 						guests={guests}
+						setLocationVal={setLocationVal}
 						handleLocation={handleLocation}
 						handleSubmit={handleSubmit}
 						handleGuests={handleGuests}
